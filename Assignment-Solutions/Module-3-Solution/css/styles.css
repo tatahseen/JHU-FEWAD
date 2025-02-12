@@ -1,0 +1,70 @@
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#top{
+    margin-top: 15px;
+}
+
+#header-nav{
+    background-color:indianred;
+    border-radius: 0;
+    border: 0;
+}
+
+.navbar-brand{
+    padding: 15px;
+}
+
+.navbar-brand h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:azure;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+}
+
+#nav-list {
+	text-align: center;
+}
+
+#nav-list a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#nav-list a:hover {
+	background-color: gray
+}
+
+.row {
+	position: relative;
+	float: left;
+    
+}
+
+.row > div > article{
+	text-align: justify;
+	margin: 15px;
+	padding: 12px;
+}
+
+#beef{
+    background-color: #942222;
+    color: white
+}
+
+#chicken{
+    background-color: #f88379;
+}
+
+#sushi{
+    background-color: #8ae168;
+}
+
+#home {
+	margin-bottom: 30px;
+}
+
