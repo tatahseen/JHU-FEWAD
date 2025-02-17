@@ -64,6 +64,17 @@ WARNING!!! WARNING!!!
       helloSpeaker.speak(names[i]);
     }
   }
-
+  
+  function generateGreeting(name) {
+    return name.charAt(0).toLowerCase() === 'j'
+      ? byeSpeaker.speakSimple(name)
+      : helloSpeaker.speakSimple(name);
+  }
+    
+  const nameMap = names.map(generateGreeting);
+  for (var i = 0; i < nameMap.length; ++i){
+    console.log(nameMap[i])
+  }
+    
 
 })();
