@@ -66,7 +66,7 @@ WARNING!!! WARNING!!!
   }
   
   function generateGreeting(name) {
-    return name.charAt(0).toLowerCase() === 'j'
+    return name.charAt(0).toLowerCase() == 'j'
       ? byeSpeaker.speakSimple(name)
       : helloSpeaker.speakSimple(name);
   }
@@ -74,6 +74,23 @@ WARNING!!! WARNING!!!
   const nameMap = names.map(generateGreeting);
   for (var i = 0; i < nameMap.length; ++i){
     console.log(nameMap[i])
+  }
+
+  const nameReduce = names.reduce((accumulator, name) => {
+    if(name.charAt(0).toLowerCase() == 'j'){
+      accumulator.bye.push(byeSpeaker.speakSimple(name));
+    }
+    else{
+      accumulator.hello.push(helloSpeaker.speakSimple(name));
+    }
+    return accumulator;
+  }, {hello: [], bye: []});
+
+  for(var i = 0; i < nameReduce.hello.length; ++i){
+    console.log(nameReduce.hello[i]);
+  }
+  for(var i = 0; i < nameReduce.bye.length; ++i){
+    console.log(nameReduce.bye[i]);
   }
     
 
