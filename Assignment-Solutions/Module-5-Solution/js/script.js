@@ -22,6 +22,7 @@ var menuItemsUrl =
   "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
+var aboutHtmlUrl = "snippets/about.html";
 
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
@@ -156,6 +157,30 @@ dc.loadMenuItems = function (categoryShort) {
     buildAndShowMenuItemsHTML);
 };
 
+dc.loadAboutPage = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+    aboutHtmlUrl,
+    buildAndShowAboutHTML,
+    false);
+};
+
+
+function buildAndShowAboutHTML () {
+  // Load title snippet of categories page
+  $ajaxUtils.sendGetRequest(
+    aboutHtmlUrl, 
+    function (aboutHtml) {
+      var starCount = Math.floor(Math.random() * 5) + 1;;
+
+      for (var i = 1; i <= 5; i++) {
+        var classValue = i <= starCount ? "fa fa-star" : "fa fa-star-o";
+        aboutHtml = insertProperty(aboutHtml, "class" + i, classValue);
+      }
+
+      insertHtml("#main-content", aboutHtml);
+  }, false);
+}
 
 // Builds HTML for the categories page based on the data
 // from the server
