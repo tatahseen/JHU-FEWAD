@@ -1,0 +1,15 @@
+.note{
+    color:darkgray;
+    font-size: 12px;
+}
+
+.noData{
+    color:red;
+    border: 1px solid red;
+}
+
+.data{
+    color: green;
+    border: 1px solid green;
+}
+
