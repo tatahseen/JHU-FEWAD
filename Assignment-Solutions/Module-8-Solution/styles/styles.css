@@ -9,6 +9,29 @@ input[type="text"] {
   float: left;
   margin-left: 10px;
 }
+.items {
+  clear: both;
+  margin-top: 30px;
+  color: darkred;
+}
+
+ul {
+  clear: both;
+  margin-top: 20px;
+}
+
+
+li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .loader {
   display: none;
   margin-left: 5px;
