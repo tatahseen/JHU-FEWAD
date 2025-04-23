@@ -1,0 +1,8 @@
+<h2>Menu Items</h2>
+<a ui-sref="home">Back to Home</a> |
+<a ui-sref="categories">Back to Categories</a>
+<ul>
+  <li ng-repeat="item in $ctrl.items">
+    {{ item.name }} - {{ item.description }}
+  </li>
+</ul>
