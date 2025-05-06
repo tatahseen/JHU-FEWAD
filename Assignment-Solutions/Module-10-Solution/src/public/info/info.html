@@ -1,0 +1,24 @@
+<div class="container" ng-controller="InfoController as ctrl">
+  <div ng-if="!ctrl.isRegistered">
+    <h2>Not Signed Up Yet. <a ui-sref="public.signup">Sign Up Now!</a></h2>
+  </div>
+
+  <div ng-if="ctrl.isRegistered">
+    <div>
+      <h2>Your Information:</h2>
+      <br />
+      <div>Full Name: {{ctrl.user.firstName }} {{ctrl.user.lastName}}</div>
+      <div>Email: {{ctrl.user.email}}</div>
+      <div>Phone Number: {{ctrl.user.phone}}</div>
+    </div>
+
+
+    <div ng-if="ctrl.menuItem">
+      <h3>Favorite Menu Item:</h3>
+      <img ng-src="{{ctrl.menuItem.image_url}}" alt="{{ctrl.menuItem.name}}" />
+      <div>Name: {{ctrl.menuItem.name}}</strong></div>
+      <div>Description: {{ctrl.menuItem.description}}</div>
+    </div>
+
+  </div>
+</div>
